@@ -25,7 +25,6 @@ function App() {
           }
         />
 
-        {/* ✅ Fallback for any unknown route */}
         <Route path="*" element={<Navigate to="/signin" replace />} />
       </Routes>
     </BrowserRouter>

@@ -51,7 +51,7 @@ function Dashboard() {
                   },
                 }
               );
-              const shareurl = `http://localhost:5173/share/${response.data.hash}`;
+              const shareurl = `{BACKNEND_URL}/api/v1/bookmarks/${response.data.hash}`;
               alert(shareurl);
             }}
             variant="secondary"
