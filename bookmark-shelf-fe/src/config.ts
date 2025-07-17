@@ -1,1 +1,1 @@
-export const BACKNEND_URL = "http://localhost:3000"
+export const BACKNEND_URL = "https://bookmark-shelf.onrender.com"
