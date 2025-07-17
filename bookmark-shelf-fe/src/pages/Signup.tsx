@@ -24,14 +24,22 @@ export function Signup() {
   return (
     <div className="h-screen flex justify-center items-center bg-gray-100">
       <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-xl shadow-md w-80 space-y-4">
-        <InputComp {...register("username")} placeholder="Username" />
-        {errors.username && <p className="text-sm text-red-500">{errors.username.message}</p>}
+  <InputComp
+    {...register("username")}
+    placeholder="Username"
+    error={errors.username?.message}
+  />
 
-        <InputComp {...register("password")} placeholder="Password" type="password" />
-        {errors.password && <p className="text-sm text-red-500">{errors.password.message}</p>}
+  <InputComp
+    {...register("password")}
+    placeholder="Password"
+    type="password"
+    error={errors.password?.message}
+  />
 
-        <Button type="submit" variant="primary" text="Sign Up" fullWidth />
-      </form>
+  <Button type="submit" variant="primary" text="Sign Up" fullWidth />
+</form>
+
     </div>
   );
 }
