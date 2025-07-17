@@ -1,0 +1,1 @@
+export const BACKNEND_URL = "http://localhost:3000"
