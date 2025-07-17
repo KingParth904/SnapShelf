@@ -9,6 +9,8 @@ import type { ContentType } from "../components/Sidebar";
 import { useContent } from "../hooks/useContent";
 import axios from "axios";
 import { BACKNEND_URL } from "../config";
+import type { CardType } from "../components/Card"; // add this if not imported
+
 
 function Dashboard() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -60,13 +62,13 @@ function Dashboard() {
 
         <div className="flex gap-4 flex-wrap mt-4">
           {filtered.map((content, index) => (
-            <Card
-              key={index}
-              type={content.type}
-              link={content.link}
-              title={content.title}
-            />
-          ))}
+  <Card
+    key={index}
+    type={content.type as CardType} 
+    link={content.link}
+    title={content.title}
+  />
+))}
         </div>
       </div>
     </>
