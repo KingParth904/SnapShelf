@@ -70,8 +70,8 @@ export function CreateContentModal({ open, onClose }: ContentModalProps) {
         </div>
 
         <div className="space-y-3">
-          <InputComp ref={titleref} placeholder="Title" onChange={() => {}} />
-          <InputComp ref={linkref} placeholder="Link" onChange={() => {}} />
+          <InputComp ref={titleref} placeholder="Title"  />
+          <InputComp ref={linkref} placeholder="Link"  />
         </div>
 
         <div className="mt-4">
